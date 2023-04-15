@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `qrcodes-pga-org`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: 'qrcodes-pga-org',
+    siteUrl: 'https://www.yourdomain.tld'
   },
-  plugins: ["gatsby-plugin-sass"]
-};
+  plugins: ['gatsby-plugin-sass']
+}

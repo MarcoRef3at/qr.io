@@ -12,7 +12,9 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lint": "standard",
+    "lint-fix": "standard --fix"
   },
   "dependencies": {
     "gatsby": "^5.8.1",
@@ -20,5 +22,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.62.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.7",
+    "standard": "^17.0.0"
   }
 }
