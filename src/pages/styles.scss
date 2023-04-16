@@ -1,13 +1,29 @@
-.pageStyles {
-  color: #232129;
-  padding: 96px;
-  font-family: '-apple-system, Roboto, sans-serif, serif';
+// .pageStyles {
+//   color: #232129;
+//   font-family: '-apple-system, Roboto, sans-serif, serif';
+// }
+main{
+  height: 97vh;
+  width: 99vw;
 }
-.headingStyles{
-  margin-top: 0px;
-  margin-bottom: 64px;
-  max-width: 320px;
+.mainElement {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  border: 2px solid black
 }
-.headingAccentStyles{
-  color: #663399,
+.qrData {
+  flex-grow: 8;
+  margin: 20px;
+  border: 2px solid black
+}
+
+.qrPreview {
+  flex-grow: 4;
+  margin: 20px;
+  border: 2px solid black
 }

@@ -4,13 +4,23 @@ import './styles.scss'
 const IndexPage = () => {
   return (
     <main className="pageStyles">
-      <h1 className="headingStyles">
-        Congratulations
-        <br />
-        <span className="headingAccentStyles">
-          — you just made a Gatsby site! 🎉🎉🎉
-        </span>
-      </h1>
+      <div className="mainElement">
+        <div className="qrData">
+          <button>link</button>
+          <button>link</button>
+          <button>link</button>
+          <button>link</button>
+          <button>link</button>
+          <button>link</button>
+          <button>link</button>
+          <button>link</button>
+          <button>link</button>
+          <button>link</button>
+          <button>link</button>
+          <button>link</button>
+        </div>
+        <div className="qrPreview">8</div>
+      </div>
     </main>
   )
 }
@@ -18,3 +28,4 @@ const IndexPage = () => {
 export default IndexPage
 
 export const Head = () => <title>Home Page</title>
+
