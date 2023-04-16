@@ -1,6 +1,6 @@
 import * as React from 'react'
-import TextInput from './shared/textInput'
 import { TextField } from '@mui/material'
+import TextInput from '../../shared/textInput'
 
 const QrEmail = ({ title }) => {
   return (

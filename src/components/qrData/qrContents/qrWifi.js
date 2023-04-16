@@ -1,5 +1,5 @@
 import * as React from 'react'
-import TextInput from './shared/textInput'
+import TextInput from '../../shared/textInput'
 
 const QrWifi = ({ title }) => {
   return (
