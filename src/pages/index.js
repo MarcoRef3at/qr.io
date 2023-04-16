@@ -1,13 +1,14 @@
 import * as React from 'react'
 import '../styles.scss'
 import QrData from '../components/qrData'
+import QrPreview from '../components/qrData/qrPreview'
 
 const IndexPage = () => {
   return (
     <main className="pageStyles">
       <div className="mainElement">
         <QrData />
-        <div className="qrPreview">qrcode</div>
+        <QrPreview />
       </div>
     </main>
   )
