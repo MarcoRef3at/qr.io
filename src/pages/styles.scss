@@ -2,7 +2,7 @@
 //   color: #232129;
 //   font-family: '-apple-system, Roboto, sans-serif, serif';
 // }
-main{
+main {
   height: 97vh;
   width: 99vw;
 }
@@ -14,16 +14,26 @@ main{
   align-items: center;
   align-content: center;
   height: 100%;
-  border: 2px solid black
+  border: 2px solid black;
 }
 .qrData {
   flex-grow: 8;
   margin: 20px;
-  border: 2px solid black
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  .qrDataHeader {
+    .tabButton {
+    }
+  }
+  .qrDataContent {
+  }
 }
 
 .qrPreview {
   flex-grow: 4;
   margin: 20px;
-  border: 2px solid black
+  border: 2px solid black;
 }
