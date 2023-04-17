@@ -1,7 +1,8 @@
 import * as React from 'react'
 import TextInput from '../../shared/textInput'
 
-const QrLink = ({ title }) => {
+const QrLink = ({ setQrValue }) => {
+  const title = 'Submit URL'
   return (
     <div>
       <div className="contentTitle">{title}</div>

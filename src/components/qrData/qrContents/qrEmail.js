@@ -2,7 +2,8 @@ import * as React from 'react'
 import { TextField } from '@mui/material'
 import TextInput from '../../shared/textInput'
 
-const QrEmail = ({ title }) => {
+const QrEmail = ({ setQrValue }) => {
+  const title = 'E-mail Content'
   return (
     <div>
       <div className="contentTitle">{title}</div>

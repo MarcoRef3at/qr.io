@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { TextField } from '@mui/material'
 
-const QrText = ({ title }) => {
+const QrText = ({ setQrValue }) => {
+  const title = 'Text Content'
   return (
     <div>
       <div className="contentTitle">{title}</div>

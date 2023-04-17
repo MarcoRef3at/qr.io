@@ -2,7 +2,8 @@ import * as React from 'react'
 import { TextField } from '@mui/material'
 import TextInput from '../../shared/textInput'
 
-const QrSMS = ({ title }) => {
+const QrSMS = ({ setQrValue }) => {
+  const title = 'SMS Content'
   return (
     <div>
       <div className="contentTitle">{title}</div>

@@ -8,40 +8,39 @@ import QrWifi from './qrContents/qrWifi'
 import QrVcard from './qrContents/qrVcard'
 import QrDataHeader from './qrDataHeader'
 
-const tabs = [
-  {
-    label: 'Link',
-    icon: 'icon',
-    content: <QrLink title="Submit URL" />,
-  },
-  {
-    label: 'E-mail',
-    icon: 'icon',
-    content: <QrEmail title="E-mail Content" />,
-  },
-  {
-    label: 'Text',
-    icon: 'icon',
-    content: <QrText title="Text Content" />,
-  },
-  {
-    label: 'SMS',
-    icon: 'icon',
-    content: <QrSMS title="SMS Content" />,
-  },
-  {
-    label: 'WI-FI',
-    icon: 'icon',
-    content: <QrWifi title="WI-FI" />,
-  },
-  {
-    label: 'V-card',
-    icon: 'icon',
-    content: <QrVcard title="Contact Information" />,
-  },
-]
-
-export default function QrData() {
+export default function QrData({ setQrValue }) {
+  const tabs = [
+    {
+      label: 'Link',
+      icon: 'icon',
+      content: <QrLink setQrValue={setQrValue} />,
+    },
+    {
+      label: 'E-mail',
+      icon: 'icon',
+      content: <QrEmail setQrValue={setQrValue} />,
+    },
+    {
+      label: 'Text',
+      icon: 'icon',
+      content: <QrText setQrValue={setQrValue} />,
+    },
+    {
+      label: 'SMS',
+      icon: 'icon',
+      content: <QrSMS setQrValue={setQrValue} />,
+    },
+    {
+      label: 'WI-FI',
+      icon: 'icon',
+      content: <QrWifi setQrValue={setQrValue} />,
+    },
+    {
+      label: 'V-card',
+      icon: 'icon',
+      content: <QrVcard setQrValue={setQrValue} />,
+    },
+  ]
   const [selectedTab, setSelectedTab] = useState(0)
 
   return (

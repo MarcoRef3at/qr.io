@@ -2,7 +2,8 @@ import * as React from 'react'
 import { TextField } from '@mui/material'
 import TextInput from '../../shared/textInput'
 
-const QrVcard = ({ title }) => {
+const QrVcard = ({ setQrValue }) => {
+  const title = 'Contact Information'
   return (
     <div>
       <div className="contentTitle">{title}</div>
