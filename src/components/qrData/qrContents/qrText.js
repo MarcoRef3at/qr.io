@@ -8,7 +8,7 @@ const QrText = ({ setQrValue }) => {
 
   useEffect(() => {
     setQrValue(textValue)
-  }, [url])
+  }, [textValue])
 
   return (
     <div>
