@@ -1,7 +1,15 @@
 import * as React from 'react'
-import { TextField } from '@mui/material'
+import { useEffect, useState } from 'react'
+import TextField from './../../shared/textField'
 
-const QrText = ({ title }) => {
+const QrText = ({ setQrValue }) => {
+  const title = 'Text Content'
+  const [textValue, setTextValue] = useState('')
+
+  useEffect(() => {
+    setQrValue(textValue)
+  }, [textValue])
+
   return (
     <div>
       <div className="contentTitle">{title}</div>
@@ -11,6 +19,10 @@ const QrText = ({ title }) => {
         multiline
         maxRows={4}
         variant="filled"
+        value={textValue}
+        handleChange={({ target }) => {
+          setTextValue(target.value)
+        }}
       />
     </div>
   )
