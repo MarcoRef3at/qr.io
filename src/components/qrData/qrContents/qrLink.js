@@ -16,7 +16,9 @@ const QrLink = ({ setQrValue }) => {
       <TextInput
         label="URL"
         value={url}
-        handleChange={() => setUrl(event.target.value)}
+        handleChange={({ target }) => {
+          setUrl(target.value)
+        }}
       />
     </div>
   )
