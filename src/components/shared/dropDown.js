@@ -1,29 +1,39 @@
-import * as React from 'react'
-import Box from '@mui/material/Box'
-import InputLabel from '@mui/material/InputLabel'
-import MenuItem from '@mui/material/MenuItem'
-import FormControl from '@mui/material/FormControl'
-import Select from '@mui/material/Select'
+import React, { useState } from 'react'
+import {
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Label,
+} from 'reactstrap'
+import PropTypes from 'prop-types'
 
-export default function DropDownMenu({ label, options, option, setOption }) {
-  const onChange = (event) => {
-    setOption(event.target.value)
-  }
+function QrDropDown({ direction, label, options, option, setOption, ...args }) {
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+
+  const toggle = () => setDropdownOpen((prevState) => !prevState)
 
   return (
-    <Box>
-      <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">{label}</InputLabel>
-        <Select value={option} label={label} onChange={onChange}>
+    <div className="d-flex p-5">
+      <Label caret>{label}</Label>
+      <Dropdown isOpen={dropdownOpen} toggle={toggle} direction={direction}>
+        <DropdownToggle caret>{options[option]}</DropdownToggle>
+        <DropdownMenu {...args}>
           {options.map((opt, i) => {
             return (
-              <MenuItem value={i} key={i}>
+              <DropdownItem key={i} onClick={() => setOption(i)}>
                 {opt}
-              </MenuItem>
+              </DropdownItem>
             )
           })}
-        </Select>
-      </FormControl>
-    </Box>
+        </DropdownMenu>
+      </Dropdown>
+    </div>
   )
 }
+
+QrDropDown.propTypes = {
+  direction: PropTypes.string,
+}
+
+export default QrDropDown

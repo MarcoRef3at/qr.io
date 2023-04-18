@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { TextField } from '@mui/material'
 import TextInput from '../../shared/textInput'
+import TextField from './../../shared/textField'
 
 const QrEmail = ({ setQrValue }) => {
   const title = 'E-mail Content'
@@ -12,7 +12,6 @@ const QrEmail = ({ setQrValue }) => {
       <TextField
         id="filled-multiline-flexible"
         label="Message"
-        multiline
         maxRows={4}
         variant="filled"
       />

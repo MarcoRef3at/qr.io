@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useEffect, useState } from 'react'
 import TextInput from '../../shared/textInput'
-import DropdownMenu from './../../shared/dropDown'
+import QrDropDown from './../../shared/dropDown'
 
 const QrWifi = ({ setQrValue }) => {
   const title = 'WI-FI'
@@ -27,7 +27,7 @@ const QrWifi = ({ setQrValue }) => {
   return (
     <div>
       <div className="contentTitle">{title}</div>
-      <DropdownMenu
+      <QrDropDown
         name="networkType"
         label="Network Type"
         options={networkTypes}

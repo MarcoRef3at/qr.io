@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { TextField } from '@mui/material'
 import TextInput from '../../shared/textInput'
+import TextField from './../../shared/textField'
 
 const QrSMS = ({ setQrValue }) => {
   const title = 'SMS Content'

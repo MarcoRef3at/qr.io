@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { TextField } from '@mui/material'
+import TextField from './../../shared/textField'
 
 const QrText = ({ setQrValue }) => {
   const title = 'Text Content'
