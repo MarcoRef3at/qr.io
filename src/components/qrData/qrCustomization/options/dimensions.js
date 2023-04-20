@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from '../../../shared/slider'
+import QrDropDown from '../../../shared/dropDown'
+
+const qrStyles = ['squares', 'dots']
 export default function Dimensions({ QrSpecs, handleChange }) {
+  const [qrStyle, setqrStyle] = useState(qrStyles[0])
+  useEffect(() => {
+    const target = { name: 'qrStyle', value: qrStyles[qrStyle] }
+    handleChange({ target })
+  }, [qrStyle])
   const buildEyeRadiusInput = (id) => {
     return (
       <Slider
@@ -18,6 +26,14 @@ export default function Dimensions({ QrSpecs, handleChange }) {
   return (
     <div>
       <h3>Dimensions</h3>
+
+      <QrDropDown
+        label="QR Style"
+        options={qrStyles}
+        option={qrStyle}
+        setOption={setqrStyle}
+      />
+
       <Slider
         name="size"
         label="QR Size"

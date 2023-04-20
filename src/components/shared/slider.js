@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function slider({
+export default function Slider({
   name,
   label,
   type,

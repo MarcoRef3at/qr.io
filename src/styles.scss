@@ -49,3 +49,19 @@ main {
 .QrCustomization{
   width: 90%;
 }
+
+.checkbox{
+  display: flex;
+  flex-Direction: row;
+  margin-Bottom: 6px;
+  align-Items: center;
+  padding-Top: 6px;
+  padding-Bottom: 6px;
+}
+
+.logo{
+  width: '240px';
+  display: 'flex';
+  flex-Direction: 'column';
+  padding: '15px';
+}
