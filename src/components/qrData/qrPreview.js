@@ -1,8 +1,20 @@
 import React from 'react'
 import '../../styles.scss'
 import { QRCode } from 'react-qrcode-logo'
+import html2canvas from 'html2canvas'
+import QrButton from '../shared/button'
 
 export default function QrPreview({ QrValue, QrSpecs }) {
+  const handleDownload = () => {
+    html2canvas(document.querySelector('#react-qrcode-logo')).then(function (
+      canvas
+    ) {
+      const link = document.createElement('a')
+      link.download = 'react-qrcode-logo.png'
+      link.href = canvas.toDataURL()
+      link.click()
+    })
+  }
   return (
     <div className="qrPreview">
       <QRCode
@@ -72,6 +84,7 @@ export default function QrPreview({ QrValue, QrSpecs }) {
           ],
         }}
       />
+      <QrButton onClick={handleDownload}>Download</QrButton>
     </div>
   )
 }
