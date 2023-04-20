@@ -15,31 +15,37 @@ main {
   align-items: center;
   align-content: center;
   height: 100%;
-  border: 2px solid black;
+  // border: 2px solid black;
 }
 .qrData {
-  flex-grow: 8;
+  flex: 8;
   margin: 20px;
-  border: 2px solid black;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   .qrDataHeader {
     .tabButton {
+      
     }
   }
   .qrDataContent {
   }
+
+  
 }
 
 .qrPreview {
-  flex-grow: 4;
+  flex: 4;
   // width: 700px;
   // height: 700px;
   display: flex;
   justify-Content: center;
   align-Items: center;
-  border: 1px solid #000000;
   border-Radius: 50px;
+}
+
+
+.QrCustomization{
+  width: 90%;
 }

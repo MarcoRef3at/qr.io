@@ -11,7 +11,7 @@ export default function QrDataHeader({ tabs, selectedTab, setSelectedTab }) {
             className="tabButton"
             onClick={() => setSelectedTab(i)}
             key={i}
-            variant={selectedTab == i ? 'contained' : 'text'}
+            outline={selectedTab == i ? false : true}
           >
             {tab.label}
           </QrButton>

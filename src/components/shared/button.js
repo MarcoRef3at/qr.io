@@ -3,7 +3,7 @@ import { Button } from 'reactstrap'
 
 export default function QrButton({ children, ...rest }) {
   return (
-    <Button color="primary" {...rest}>
+    <Button color="primary" outline {...rest}>
       {children}
     </Button>
   )

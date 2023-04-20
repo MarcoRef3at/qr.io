@@ -7,8 +7,10 @@ import QrSMS from './qrContents/qrSms'
 import QrWifi from './qrContents/qrWifi'
 import QrVcard from './qrContents/qrVcard'
 import QrDataHeader from './qrDataHeader'
+import QrCustomization from './qrCustomization'
+import '../../styles.scss'
 
-export default function QrData({ setQrValue }) {
+export default function QrData({ setQrValue, QrSpecs, setQrSpecs }) {
   const tabs = [
     {
       label: 'Link',
@@ -51,8 +53,9 @@ export default function QrData({ setQrValue }) {
         setSelectedTab={setSelectedTab}
       />
       <div className="qrDataContent">{tabs[selectedTab].content}</div>
-      <div className="qrDataOptions">Options</div>
-      <div className="qrDataLogo">Logo</div>
+      <div className="QrCustomization">
+        <QrCustomization QrSpecs={QrSpecs} setQrSpecs={setQrSpecs} />
+      </div>
     </div>
   )
 }
