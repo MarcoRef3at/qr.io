@@ -24,7 +24,6 @@ main {
   flex-wrap: wrap;
   align-items: center;
   border: 5px solid #f0e9e9;
-
 }
 
 .qrPreview {
@@ -32,19 +31,19 @@ main {
   // width: 700px;
   // height: 700px;
   display: flex;
-  justify-Content: center;
-  align-Items: center;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #000000;
   border: 5px solid #f0e9e9;
 }
-.contentTitle{
-  font-family: "Nunito Sans", sans-serif;
+.contentTitle {
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
 }
-.qrDataHeader{
+.qrDataHeader {
   padding: 12px;
 }
 .btn-primary {
@@ -78,11 +77,11 @@ main {
   -moz-appearance: none;
   appearance: none;
   border-radius: 0.375rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   color: #999;
   font-style: italic;
 }
-.qrDataOptions{
+.qrDataOptions {
   background-color: #fff;
   color: #333;
   border: 1px solid #ccc;
@@ -101,7 +100,7 @@ main {
   outline: none;
   box-shadow: 0 0 0 2px #007bff;
 }
-.qrDataLogo{
+.qrDataLogo {
   margin: 12px;
   display: inline-block;
   font-size: 24px;
@@ -140,34 +139,40 @@ main {
   display: block;
 }
 
-
-.QrCustomization{
+.QrCustomization {
   width: 90%;
 }
 
-.checkbox{
+.checkbox {
   display: flex;
-  flex-Direction: row;
-  margin-Bottom: 6px;
-  align-Items: center;
-  padding-Top: 6px;
-  padding-Bottom: 6px;
+  flex-direction: row;
+  margin-bottom: 6px;
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
-.logo{
+.logo {
   width: '240px';
   display: 'flex';
-  flex-Direction: 'column';
+  flex-direction: 'column';
   padding: '15px';
 }
 .dropdown-item:hover {
   background-color: #f5f5f5;
 }
-.form-laper{
+.form-laper {
   color: #999;
   font-style: italic;
 }
-.mb-3{
+.mb-3 {
   color: #999;
-  font-style: italic; 
+  font-style: italic;
 }
+
+.vcardForm {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
