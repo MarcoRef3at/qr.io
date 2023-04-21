@@ -1,45 +1,50 @@
-import React from 'react'
-import { useState } from 'react'
-import QrLink from './qrContents/qrLink'
-import QrEmail from './qrContents/qrEmail'
-import QrText from './qrContents/qrText'
-import QrSMS from './qrContents/qrSms'
-import QrWifi from './qrContents/qrWifi'
-import QrVcard from './qrContents/qrVcard'
-import QrDataHeader from './qrDataHeader'
-import QrCustomization from './qrCustomization'
+import React, { useState } from 'react'
+import { AiOutlineMail } from "react-icons/Ai"
+import { BsLink45Deg, BsWifi } from "react-icons/bs"
+import { CiTextAlignJustify } from "react-icons/ci"
+import { MdOutlineTextsms } from "react-icons/md"
+import { RiContactsBookLine } from "react-icons/ri"
 import '../../styles.scss'
+import QrEmail from './qrContents/qrEmail'
+import QrLink from './qrContents/qrLink'
+import QrSMS from './qrContents/qrSms'
+import QrText from './qrContents/qrText'
+import QrVcard from './qrContents/qrVcard'
+import QrWifi from './qrContents/qrWifi'
+import QrCustomization from './qrCustomization'
+import QrDataHeader from './qrDataHeader'
+
 
 export default function QrData({ setQrValue, QrSpecs, setQrSpecs }) {
   const tabs = [
     {
       label: 'Link',
-      icon: 'icon',
+      icon: <BsLink45Deg/>,
       content: <QrLink setQrValue={setQrValue} />,
     },
     {
       label: 'E-mail',
-      icon: 'icon',
+      icon: <AiOutlineMail/>,
       content: <QrEmail setQrValue={setQrValue} />,
     },
     {
       label: 'Text',
-      icon: 'icon',
+      icon: <CiTextAlignJustify/>,
       content: <QrText setQrValue={setQrValue} />,
     },
     {
       label: 'SMS',
-      icon: 'icon',
+      icon: <MdOutlineTextsms/>,
       content: <QrSMS setQrValue={setQrValue} />,
     },
     {
       label: 'WI-FI',
-      icon: 'icon',
+      icon: <BsWifi/>,
       content: <QrWifi setQrValue={setQrValue} />,
     },
     {
       label: 'V-card',
-      icon: 'icon',
+      icon: <RiContactsBookLine/>,
       content: <QrVcard setQrValue={setQrValue} />,
     },
   ]

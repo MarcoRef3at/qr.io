@@ -13,6 +13,7 @@ export default function QrDataHeader({ tabs, selectedTab, setSelectedTab }) {
             key={i}
             outline={selectedTab == i ? false : true}
           >
+            {tab.icon}
             {tab.label}
           </QrButton>
         )
