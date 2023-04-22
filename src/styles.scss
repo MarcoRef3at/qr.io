@@ -61,6 +61,7 @@ main {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
+  margin-top: 1rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -173,4 +174,9 @@ main {
 .colorPicker {
   min-width: 5rem;
   margin-left: 1rem;
+}
+
+.accordions{
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }

@@ -11,11 +11,10 @@ import Logos from './logos'
 
 export default function QrCustomization({ QrSpecs, setQrSpecs }) {
   const handleChange = ({ target }) => {
-    console.log(target)
     setQrSpecs({ ...QrSpecs, [target.name]: target.value })
   }
   return (
-    <UncontrolledAccordion defaultOpen="1">
+    <UncontrolledAccordion defaultOpen="1" className="accordions">
       <Options accordionId={1} QrSpecs={QrSpecs} handleChange={handleChange} />
       <Logos accordionId={2} QrSpecs={QrSpecs} handleChange={handleChange} />
     </UncontrolledAccordion>
