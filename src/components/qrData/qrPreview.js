@@ -7,7 +7,7 @@ import { Col } from 'reactstrap'
 import { useEffect, useContext } from 'react'
 import { QrContext } from '../../contexts/qr.context'
 
-export default function QrPreview({ QrSpecs }) {
+export default function QrPreview() {
   const handleDownload = () => {
     html2canvas(document.querySelector('#react-qrcode-logo')).then(function (
       canvas
@@ -18,7 +18,7 @@ export default function QrPreview({ QrSpecs }) {
       link.click()
     })
   }
-  const { QrValue } = useContext(QrContext)
+  const { QrValue, QrSpecs } = useContext(QrContext)
 
   return (
     <div className="qrPreview">

@@ -1,7 +1,10 @@
-import React from 'react'
-import ColorPicker from '../../../shared/colorPicker'
+import React, { useContext } from 'react'
 import { Col, Row } from 'reactstrap'
-export default function Colors({ QrSpecs, handleChange }) {
+import { QrContext } from '../../../../contexts/qr.context'
+import ColorPicker from '../../../shared/colorPicker'
+
+export default function Colors({ handleChange }) {
+  const { QrSpecs } = useContext(QrContext)
   return (
     <div>
       <h3>Colors</h3>

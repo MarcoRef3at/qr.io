@@ -1,22 +1,19 @@
-import React from 'react'
-import {
-  AccordionBody,
-  AccordionHeader,
-  AccordionItem,
-  UncontrolledAccordion,
-} from 'reactstrap'
+import React, { useContext } from 'react'
+import { UncontrolledAccordion } from 'reactstrap'
+import { QrContext } from '../../../contexts/qr.context'
 import '../../../styles.scss'
-import Options from './options/options'
 import Logos from './logos'
+import Options from './options/options'
 
-export default function QrCustomization({ QrSpecs, setQrSpecs }) {
+export default function QrCustomization() {
+  const { setQrSpecs, QrSpecs } = useContext(QrContext)
   const handleChange = ({ target }) => {
     setQrSpecs({ ...QrSpecs, [target.name]: target.value })
   }
   return (
     <UncontrolledAccordion defaultOpen="1" className="accordions">
-      <Options accordionId={1} QrSpecs={QrSpecs} handleChange={handleChange} />
-      <Logos accordionId={2} QrSpecs={QrSpecs} handleChange={handleChange} />
+      <Options accordionId={1} handleChange={handleChange} />
+      <Logos accordionId={2} handleChange={handleChange} />
     </UncontrolledAccordion>
   )
 }

@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import Slider from '../../../shared/slider'
+import React, { useContext, useEffect, useState } from 'react'
+import { QrContext } from '../../../../contexts/qr.context'
 import QrDropDown from '../../../shared/dropDown'
+import Slider from '../../../shared/slider'
 
 const qrStyles = ['squares', 'dots']
-export default function Dimensions({ QrSpecs, handleChange }) {
+export default function Dimensions({ handleChange }) {
+  const { QrSpecs } = useContext(QrContext)
   const [qrStyle, setqrStyle] = useState(qrStyles[0])
   useEffect(() => {
     const target = { name: 'qrStyle', value: qrStyles[qrStyle] }

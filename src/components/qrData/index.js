@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { AiOutlineMail } from 'react-icons/Ai'
 import { BsLink45Deg, BsWifi } from 'react-icons/bs'
 import { CiTextAlignJustify } from 'react-icons/ci'
 import { MdOutlineTextsms } from 'react-icons/md'
 import { RiContactsBookLine } from 'react-icons/ri'
+import { QrContext } from '../../contexts/qr.context'
 import '../../styles.scss'
 import QrEmail from './qrContents/qrEmail'
 import QrLink from './qrContents/qrLink'
@@ -14,7 +15,8 @@ import QrWifi from './qrContents/qrWifi'
 import QrCustomization from './qrCustomization'
 import QrDataHeader from './qrDataHeader'
 
-export default function QrData({ QrSpecs, setQrSpecs }) {
+export default function QrData() {
+  const { QrSpecs, setQrSpecs } = useContext(QrContext)
   const tabs = [
     {
       label: 'Link',
