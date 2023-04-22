@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-
+import TextInput from './textInput'
+import '../../styles.scss'
 export default function ColorPicker({
   name,
   handleChange,
@@ -38,9 +39,9 @@ export default function ColorPicker({
     <div
       style={{ display: 'flex', flexDirection: 'column', marginBottom: '6px' }}
     >
-      {!hideLabel && <label>{label}</label>}
       <div style={{ display: 'flex' }}>
-        <input
+        <TextInput
+          label={label}
           type="text"
           id={`${name}-hex`}
           name={`${name}`}
@@ -49,8 +50,10 @@ export default function ColorPicker({
           defaultValue={defaultValue}
           style={{ marginLeft: '6px' }}
         />
-        <input
+        <TextInput
           type="color"
+          className="colorPicker"
+          style={{ padding: '2px' }}
           id={name}
           name={name}
           onChange={handleColorChange}
