@@ -61,7 +61,7 @@ export default function Logos({ QrSpecs, handleChange }) {
         />
         <Slider
           name="logoPadding"
-          label="logoPadding"
+          label="Logo Padding"
           type="range"
           handleChange={handleChange}
           min={0}
@@ -71,7 +71,7 @@ export default function Logos({ QrSpecs, handleChange }) {
         />
 
         <QrDropDown
-          label="logoPaddingStyle"
+          label="Logo Padding Style"
           options={logoPaddingStyles}
           option={logoPadding}
           setOption={setLogoPadding}
