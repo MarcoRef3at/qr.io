@@ -1,9 +1,11 @@
 import * as React from 'react'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { QrContext } from '../../../contexts/qr.context'
 import TextInput from '../../shared/textInput'
 import TextField from './../../shared/textField'
 
-const QrVcard = ({ setQrValue }) => {
+const QrVcard = () => {
+  const { setQrValue } = useContext(QrContext)
   const title = 'Contact Information'
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')

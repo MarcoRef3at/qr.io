@@ -1,10 +1,12 @@
 import * as React from 'react'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { QrContext } from '../../../contexts/qr.context'
 import TextField from './../../shared/textField'
 
-const QrText = ({ setQrValue }) => {
+const QrText = () => {
   const title = 'Text Content'
   const [textValue, setTextValue] = useState('')
+  const { setQrValue } = useContext(QrContext)
 
   useEffect(() => {
     setQrValue(textValue)

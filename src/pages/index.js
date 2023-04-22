@@ -1,18 +1,18 @@
 import * as React from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import QrData from '../components/qrData'
 import QrPreview from '../components/qrData/qrPreview'
 import '../styles.scss'
+import { QrContext, QrProvider } from '../contexts/qr.context'
 
 const IndexPage = () => {
-  const [QrValue, setQrValue] = useState('')
+  const { QrValue } = useContext(QrContext)
   const [QrSpecs, setQrSpecs] = useState({
     bgColor: '#ffffff',
     fgColor: '#e3e3e3',
     size: 300,
   })
   useEffect(() => {
-    console.log(QrValue)
     if (QrValue && QrSpecs.fgColor == '#e3e3e3') {
       setQrSpecs({ ...QrSpecs, fgColor: '#000000' })
     }
@@ -21,13 +21,10 @@ const IndexPage = () => {
   return (
     <main className="pageStyles">
       <div className="mainElement">
-        <QrData
-          QrValue={QrValue}
-          setQrValue={setQrValue}
-          QrSpecs={QrSpecs}
-          setQrSpecs={setQrSpecs}
-        />
-        <QrPreview QrValue={QrValue} QrSpecs={QrSpecs} />
+        <QrProvider>
+          <QrData QrSpecs={QrSpecs} setQrSpecs={setQrSpecs} />
+          <QrPreview QrSpecs={QrSpecs} />
+        </QrProvider>
       </div>
     </main>
   )
