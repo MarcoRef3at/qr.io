@@ -3,14 +3,14 @@ import { AccordionBody, AccordionHeader, AccordionItem } from 'reactstrap'
 import Colors from './colors'
 import Dimensions from './dimensions'
 
-export default function Options({ accordionId, QrSpecs, handleChange }) {
+export default function Options({ accordionId, handleChange }) {
   return (
     <AccordionItem>
       <AccordionHeader targetId={accordionId}>Options</AccordionHeader>
       <AccordionBody accordionId={accordionId}>
-        <Colors QrSpecs={QrSpecs} handleChange={handleChange} />
+        <Colors handleChange={handleChange} />
         <hr />
-        <Dimensions QrSpecs={QrSpecs} handleChange={handleChange} />
+        <Dimensions handleChange={handleChange} />
       </AccordionBody>
     </AccordionItem>
   )

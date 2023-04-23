@@ -1,10 +1,12 @@
 import * as React from 'react'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { QrContext } from '../../../contexts/qr.context'
 import TextInput from '../../shared/textInput'
 import TextField from './../../shared/textField'
 
-const QrEmail = ({ setQrValue }) => {
+const QrEmail = () => {
   const title = 'E-mail Content'
+  const { setQrValue } = useContext(QrContext)
   const [email, setEmail] = useState('')
   const [emailSubject, setEmailSubject] = useState('')
   const [emailBody, setEmailBody] = useState('')

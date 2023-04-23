@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import {
-  AccordionBody,
-  AccordionHeader,
-  AccordionItem,
-  Input,
-  Label,
-} from 'reactstrap'
+import { AccordionBody, AccordionHeader, AccordionItem } from 'reactstrap'
+import { CheckboxField } from '../../shared/checkbox'
 import { ImageUploadField } from '../../shared/imageUpload'
 import Slider from '../../shared/slider'
 import QrDropDown from './../../shared/dropDown'
-import { CheckboxField } from '../../shared/checkbox'
 
 const logoPaddingStyles = ['square', 'circle']
-export default function Logos({ QrSpecs, handleChange }) {
+export default function Logos({ handleChange }) {
   const [logoPadding, setLogoPadding] = useState(logoPaddingStyles[0])
 
   useEffect(() => {
@@ -61,7 +55,7 @@ export default function Logos({ QrSpecs, handleChange }) {
         />
         <Slider
           name="logoPadding"
-          label="logoPadding"
+          label="Logo Padding"
           type="range"
           handleChange={handleChange}
           min={0}
@@ -71,7 +65,7 @@ export default function Logos({ QrSpecs, handleChange }) {
         />
 
         <QrDropDown
-          label="logoPaddingStyle"
+          label="Logo Padding Style"
           options={logoPaddingStyles}
           option={logoPadding}
           setOption={setLogoPadding}

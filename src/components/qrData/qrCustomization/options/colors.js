@@ -1,22 +1,31 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Col, Row } from 'reactstrap'
+import { QrContext } from '../../../../contexts/qr.context'
 import ColorPicker from '../../../shared/colorPicker'
-export default function Colors({ QrSpecs, handleChange }) {
+
+export default function Colors({ handleChange }) {
+  const { QrSpecs } = useContext(QrContext)
   return (
     <div>
       <h3>Colors</h3>
-      <ColorPicker
-        name="bgColor"
-        label="Background Color"
-        defaultValue={QrSpecs.bgColor}
-        handleChange={handleChange}
-      />
-      <ColorPicker
-        name="fgColor"
-        label="Dots Color"
-        defaultValue={QrSpecs.fgColor}
-        handleChange={handleChange}
-      />
-
+      <Row>
+        <Col>
+          <ColorPicker
+            name="bgColor"
+            label="Background Color"
+            defaultValue={QrSpecs.bgColor}
+            handleChange={handleChange}
+          />
+        </Col>
+        <Col>
+          <ColorPicker
+            name="fgColor"
+            label="Dots Color"
+            defaultValue={QrSpecs.fgColor}
+            handleChange={handleChange}
+          />
+        </Col>
+      </Row>
       <div style={{ padding: '15px' }}>
         <h5>eyeColor</h5>
         <div

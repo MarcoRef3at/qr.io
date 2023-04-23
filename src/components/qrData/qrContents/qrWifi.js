@@ -1,12 +1,14 @@
 import * as React from 'react'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { QrContext } from '../../../contexts/qr.context'
 import TextInput from '../../shared/textInput'
 import QrDropDown from './../../shared/dropDown'
 
-const QrWifi = ({ setQrValue }) => {
+const QrWifi = () => {
   const title = 'WI-FI'
   const networkTypes = ['WEP', 'WPA', 'WPA2']
 
+  const { setQrValue } = useContext(QrContext)
   const [wifiName, setWifiName] = useState('')
   const [wifiPassword, setWifiPassword] = useState('')
   const [networkType, setNetworkType] = useState(networkTypes[0])

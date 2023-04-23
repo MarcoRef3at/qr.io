@@ -4,8 +4,10 @@ import { QRCode } from 'react-qrcode-logo'
 import html2canvas from 'html2canvas'
 import QrButton from '../shared/button'
 import { Col } from 'reactstrap'
+import { useEffect, useContext } from 'react'
+import { QrContext } from '../../contexts/qr.context'
 
-export default function QrPreview({ QrValue, QrSpecs }) {
+export default function QrPreview() {
   const handleDownload = () => {
     html2canvas(document.querySelector('#react-qrcode-logo')).then(function (
       canvas
@@ -16,10 +18,13 @@ export default function QrPreview({ QrValue, QrSpecs }) {
       link.click()
     })
   }
+  const { QrValue, QrSpecs } = useContext(QrContext)
+
   return (
     <div className="qrPreview">
       <Col>
         <QRCode
+          id="qrCodeImage"
           value={QrValue}
           logoOnLoad={() => console.log('logo loaded')}
           {...{
