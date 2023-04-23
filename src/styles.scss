@@ -26,16 +26,28 @@ main {
 
 .qrPreview {
   flex: 4;
-  // width: 700px;
-  // height: 700px;
+  margin: 20px;
+}
+
+.sticky-element {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  align-items: center;
+}
+
+.downloadButton{
+  margin-top: 20px;
+  width: 50%;
 }
 .contentTitle {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 .qrDataHeader {
@@ -51,7 +63,7 @@ main {
   border: none;
   cursor: pointer;
 }
-.tabButton{
+.tabButton {
   color: #2a354f;
   padding: 0.9rem 1.625rem;
   border-radius: 0rem;
@@ -81,7 +93,7 @@ main {
   color: #999;
   font-style: italic;
 }
-svg{
+svg {
   margin: 0px 4px 3px 0px;
 }
 .qrDataOptions {
@@ -178,26 +190,41 @@ svg{
   flex-wrap: wrap;
 }
 
-.d-flex label{
+.d-flex label {
   padding: 3px;
   font-weight: bold;
 }
-.qrDataContent label{
+.qrDataContent label {
   display: flex;
 }
-input[type="file"] {
+.qrDataContent {
+  width: 80%;
+}
+input[type='file'] {
   color: rgb(183 170 170);
-  border-radius: 5px; 
-  padding: 10px; 
-  font-size: 16px; 
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
   border: none;
   cursor: pointer;
-}.colorPicker {
+}
+.colorPicker {
   min-width: 5rem;
   margin-left: 1rem;
 }
 
-.accordions{
+.accordions {
   margin-bottom: 1rem;
   margin-top: 1rem;
+}
+
+.wifiContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dropDownLabel {
+  justify-content: center;
+  font-weight: bold;
 }

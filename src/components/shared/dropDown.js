@@ -15,9 +15,11 @@ function QrDropDown({ direction, label, options, option, setOption, ...args }) {
   const toggle = () => setDropdownOpen((prevState) => !prevState)
 
   return (
-    <div className="d-flex p-5">
-      <Row style={{ textAlign: 'center' }}>
-        <Label caret="true">{label}</Label>
+    <div>
+      <Row style={{ textAlign: 'center', paddingTop: -4 }}>
+        <Label caret="true" className="dropDownLabel">
+          {label}
+        </Label>
         <Dropdown isOpen={dropdownOpen} toggle={toggle} direction={direction}>
           <DropdownToggle style={{ width: '100%', maxWidth: '8rem' }} caret>
             {options[option] || options[0]}

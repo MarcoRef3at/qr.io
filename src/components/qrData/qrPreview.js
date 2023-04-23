@@ -1,11 +1,10 @@
-import React from 'react'
-import '../../styles.scss'
-import { QRCode } from 'react-qrcode-logo'
 import html2canvas from 'html2canvas'
-import QrButton from '../shared/button'
-import { Col } from 'reactstrap'
-import { useEffect, useContext } from 'react'
+import React, { useContext } from 'react'
+import { QRCode } from 'react-qrcode-logo'
 import { QrContext } from '../../contexts/qr.context'
+import '../../styles.scss'
+import { BsDownload } from 'react-icons/Bs'
+import QrButton from '../shared/button'
 
 export default function QrPreview() {
   const handleDownload = () => {
@@ -22,7 +21,7 @@ export default function QrPreview() {
 
   return (
     <div className="qrPreview">
-      <Col>
+      <div className="sticky-element">
         <QRCode
           id="qrCodeImage"
           value={QrValue}
@@ -91,10 +90,10 @@ export default function QrPreview() {
             ],
           }}
         />
-        <QrButton className=".row" onClick={handleDownload}>
-          Download
+        <QrButton className="downloadButton" onClick={handleDownload}>
+          <BsDownload /> Download
         </QrButton>
-      </Col>
+      </div>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import { Form, FormGroup, Input, Label } from 'reactstrap'
 
 const TextInput = ({ handleChange, label, ...rest }) => {
   return (
-    <Form>
+    <Form style={{ paddingRight: '1rem' }}>
       <FormGroup floating>
         <Input
           id="inputField"

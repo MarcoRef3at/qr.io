@@ -128,18 +128,7 @@ const QrVcard = () => {
             handleChange(e)
           }}
         />
-        <TextField
-          id="filled-multiline-flexible"
-          label="Address"
-          multiline
-          maxRows={4}
-          variant="filled"
-          value={address}
-          handleChange={(e) => {
-            setAddress(e.target.value)
-            handleChange(e)
-          }}
-        />
+
         <TextInput
           label="City"
           value={city}
@@ -161,6 +150,19 @@ const QrVcard = () => {
           value={country}
           handleChange={(e) => {
             setCountry(e.target.value)
+            handleChange(e)
+          }}
+        />
+
+        <TextField
+          id="filled-multiline-flexible"
+          label="Address"
+          multiline
+          maxRows={4}
+          variant="filled"
+          value={address}
+          handleChange={(e) => {
+            setAddress(e.target.value)
             handleChange(e)
           }}
         />

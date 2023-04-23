@@ -29,25 +29,28 @@ const QrWifi = () => {
   return (
     <div>
       <div className="contentTitle">{title}</div>
-      <QrDropDown
-        name="networkType"
-        label="Network Type"
-        options={networkTypes}
-        option={networkType}
-        setOption={setNetworkType}
-      />
-      <TextInput
-        name="wifiSSID"
-        label="Network name (SSID)"
-        type="text"
-        handleChange={handleChange}
-      />
-      <TextInput
-        name="wifiPassword"
-        label="Password"
-        type="password"
-        handleChange={handleChange}
-      />
+
+      <div className="wifiContent">
+        <QrDropDown
+          name="networkType"
+          label="Network Type"
+          options={networkTypes}
+          option={networkType}
+          setOption={setNetworkType}
+        />
+        <TextInput
+          name="wifiSSID"
+          label="Network name (SSID)"
+          type="text"
+          handleChange={handleChange}
+        />
+        <TextInput
+          name="wifiPassword"
+          label="Password"
+          type="password"
+          handleChange={handleChange}
+        />
+      </div>
     </div>
   )
 }
