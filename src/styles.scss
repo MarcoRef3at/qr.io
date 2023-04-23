@@ -40,22 +40,26 @@ main {
 }
 .qrDataHeader {
   padding: 12px;
+  border: 1px solid rgb(233, 236, 239);
 }
 .btn-primary {
-  background-color: #4caf50;
   color: #fff;
   border-radius: 4px;
   padding: 12px 24px;
   font-size: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
   border: none;
   cursor: pointer;
 }
-.btn-primary:hover {
-  background-color: #388e3c;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+.tabButton{
+  color: #2a354f;
+  padding: 0.9rem 1.625rem;
+  border-radius: 0rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  background: #ffffff;
+  border: 0.0625rem solid #f3f7fa;
 }
 .form-control {
   display: block;
@@ -75,6 +79,9 @@ main {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   color: #999;
   font-style: italic;
+}
+svg{
+  margin: 0px 4px 3px 0px;
 }
 .qrDataOptions {
   background-color: #fff;
@@ -170,4 +177,18 @@ main {
   flex-wrap: wrap;
 }
 
-
+.d-flex label{
+  padding: 3px;
+  font-weight: bold;
+}
+.qrDataContent label{
+  display: flex;
+}
+input[type="file"] {
+  color: rgb(183 170 170);
+  border-radius: 5px; 
+  padding: 10px; 
+  font-size: 16px; 
+  border: none;
+  cursor: pointer;
+}
