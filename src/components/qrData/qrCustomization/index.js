@@ -11,9 +11,9 @@ export default function QrCustomization() {
     setQrSpecs({ ...QrSpecs, [target.name]: target.value })
   }
   return (
-    <UncontrolledAccordion defaultOpen="1" className="accordions">
-      <Options accordionId={1} handleChange={handleChange} />
-      <Logos accordionId={2} handleChange={handleChange} />
+    <UncontrolledAccordion defaultOpen="0" className="accordions">
+      <Options accordionId={'1'} open={['1']} handleChange={handleChange} />
+      <Logos accordionId={'2'} open={['2']} handleChange={handleChange} />
     </UncontrolledAccordion>
   )
 }

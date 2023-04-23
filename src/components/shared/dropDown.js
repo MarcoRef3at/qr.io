@@ -5,7 +5,6 @@ import {
   DropdownMenu,
   DropdownItem,
   Label,
-  Col,
   Row,
 } from 'reactstrap'
 import PropTypes from 'prop-types'
@@ -18,7 +17,7 @@ function QrDropDown({ direction, label, options, option, setOption, ...args }) {
   return (
     <div className="d-flex p-5">
       <Row style={{ textAlign: 'center' }}>
-        <Label caret>{label}</Label>
+        <Label caret="true">{label}</Label>
         <Dropdown isOpen={dropdownOpen} toggle={toggle} direction={direction}>
           <DropdownToggle style={{ width: '100%', maxWidth: '8rem' }} caret>
             {options[option] || options[0]}
