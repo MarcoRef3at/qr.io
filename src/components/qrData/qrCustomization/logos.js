@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { RiImageAddFill } from 'react-icons/ri'
 import { AccordionBody, AccordionHeader, AccordionItem } from 'reactstrap'
 import { CheckboxField } from '../../shared/checkbox'
 import { ImageUploadField } from '../../shared/imageUpload'
@@ -19,7 +20,10 @@ export default function Logos({ handleChange }) {
 
   return (
     <AccordionItem>
-      <AccordionHeader targetId="2">Logos</AccordionHeader>
+      <AccordionHeader targetId="2">
+        <RiImageAddFill />
+        Logos
+      </AccordionHeader>
       <AccordionBody accordionId="2" className="logo">
         <ImageUploadField name="logoImage" handleChange={handleChange} />
         <Slider
