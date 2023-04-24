@@ -247,3 +247,46 @@ input[type='file'] {
   justify-content: center;
   flex-wrap: wrap;
 }
+.my-2 .btn{
+  width: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+// .downloadButton {
+//   color: #2a354f;
+//   padding: 0.9rem 1.625rem;
+//   border-radius: 30px;
+//   text-align: center;
+//   font-size: 14px;
+//   font-weight: 600;
+//   background: #ffffff;
+//   border: 0.0625rem solid #e6e8e9;
+// }
+.downloadButton{
+  border: 1px solid #919499;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 12px;
+    display: inline-block;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    outline: 0;
+    position: relative;
+    background-color: #242629;
+    border-color: #242629;
+    color: #fff;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+.downloadButton:hover{
+  transform: translateY(-3px);
+  background-color: #242629;
+}
+
