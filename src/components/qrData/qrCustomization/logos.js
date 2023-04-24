@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { RiImageAddFill } from 'react-icons/ri'
 import { AccordionBody, AccordionHeader, AccordionItem } from 'reactstrap'
 import { CheckboxField } from '../../shared/checkbox'
-import { ImageUploadField } from '../../shared/imageUpload'
 import Slider from '../../shared/slider'
 import QrDropDown from './../../shared/dropDown'
+import StaticLogos from './staticLogos'
 
 const logoPaddingStyles = ['square', 'circle']
 export default function Logos({ handleChange }) {
@@ -25,7 +25,7 @@ export default function Logos({ handleChange }) {
         Logos
       </AccordionHeader>
       <AccordionBody accordionId="2" className="logo">
-        <ImageUploadField name="logoImage" handleChange={handleChange} />
+        <StaticLogos handleChange={handleChange} />
         <Slider
           name="logoWidth"
           label="logoWidth"

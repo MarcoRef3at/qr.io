@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { BiImageAdd } from 'react-icons/Bi'
 export const ImageUploadField = ({ name, handleChange }) => {
   const retrievePathFile = (files) => {
     const file = files[0]
@@ -21,13 +22,17 @@ export const ImageUploadField = ({ name, handleChange }) => {
     <div
       style={{ display: 'flex', flexDirection: 'column', marginBottom: '6px' }}
     >
-      <label>{name}</label>
       <input
         type="file"
         accept="image/*"
         name={name}
+        id="fileInput"
         onChange={(e) => retrievePathFile(e.target.files)}
+        style={{ display: 'none' }}
       />
+      <label htmlFor="fileInput">
+        <BiImageAdd className="addImageButton" />
+      </label>
     </div>
   )
 }
