@@ -253,17 +253,6 @@ input[type='file'] {
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-
-// .downloadButton {
-//   color: #2a354f;
-//   padding: 0.9rem 1.625rem;
-//   border-radius: 30px;
-//   text-align: center;
-//   font-size: 14px;
-//   font-weight: 600;
-//   background: #ffffff;
-//   border: 0.0625rem solid #e6e8e9;
-// }
 .downloadButton{
   border: 1px solid #919499;
     margin-bottom: 10px;
@@ -289,4 +278,11 @@ input[type='file'] {
   transform: translateY(-3px);
   background-color: #242629;
 }
-
+.accordion-button:hover{
+background-color: #e7f1ff;
+}
+.accordion {
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem #e7f1ff;
+    --bs-accordion-active-color: #000000;
+    --bs-accordion-active-bg: #e7f1ff;
+}
