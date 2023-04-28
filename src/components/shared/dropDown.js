@@ -21,7 +21,11 @@ function QrDropDown({ direction, label, options, option, setOption, ...args }) {
           {label}
         </Label>
         <Dropdown isOpen={dropdownOpen} toggle={toggle} direction={direction}>
-          <DropdownToggle style={{ width: '100%', maxWidth: '8rem' }} caret>
+          <DropdownToggle
+            style={{ width: '100%', maxWidth: '8rem' }}
+            color="primary"
+            caret
+          >
             {options[option] || options[0]}
           </DropdownToggle>
           <DropdownMenu {...args}>

@@ -16,7 +16,6 @@ export default function Dimensions({ handleChange }) {
       <Slider
         name={id}
         label={id}
-        type="range"
         handleChange={handleChange}
         min={0}
         max={50}
@@ -39,7 +38,6 @@ export default function Dimensions({ handleChange }) {
       <Slider
         name="size"
         label="QR Size"
-        type="range"
         defaultValue={QrSpecs.size}
         handleChange={handleChange}
         min={250}
@@ -48,7 +46,6 @@ export default function Dimensions({ handleChange }) {
       <Slider
         name="quietZone"
         label="Background Size"
-        type="range"
         handleChange={handleChange}
         min={20}
         max={80}

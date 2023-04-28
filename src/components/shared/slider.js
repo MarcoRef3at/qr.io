@@ -1,9 +1,9 @@
 import React from 'react'
+import '../../styles.scss'
 
 export default function Slider({
   name,
   label,
-  type,
   handleChange,
   min,
   max,
@@ -18,7 +18,8 @@ export default function Slider({
     >
       {!hideLabel && <label>{label}</label>}
       <input
-        type={type}
+        className="slider"
+        type="range"
         id={name}
         name={name}
         onChange={handleChange}

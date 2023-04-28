@@ -29,7 +29,6 @@ export default function Logos({ handleChange }) {
         <Slider
           name="logoWidth"
           label="logoWidth"
-          type="range"
           handleChange={handleChange}
           min={20}
           max={500}
@@ -37,7 +36,6 @@ export default function Logos({ handleChange }) {
         <Slider
           name="logoHeight"
           label="logoHeight"
-          type="range"
           handleChange={handleChange}
           min={20}
           max={500}
@@ -45,7 +43,6 @@ export default function Logos({ handleChange }) {
         <Slider
           name="logoOpacity"
           label="logoOpacity"
-          type="range"
           handleChange={handleChange}
           min={0}
           max={1}
@@ -60,7 +57,6 @@ export default function Logos({ handleChange }) {
         <Slider
           name="logoPadding"
           label="Logo Padding"
-          type="range"
           handleChange={handleChange}
           min={0}
           max={20}
