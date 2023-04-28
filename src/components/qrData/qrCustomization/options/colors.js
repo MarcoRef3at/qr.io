@@ -1,32 +1,40 @@
 import React, { useContext } from 'react'
-import { Col, Row } from 'reactstrap'
-import { QrContext } from '../../../../contexts/qr.context'
-import ColorPicker from '../../../shared/colorPicker'
+import { Button } from 'reactstrap'
+// import { QrContext } from '../../../../contexts/qr.context'
 
 export default function Colors({ handleChange }) {
-  const { QrSpecs } = useContext(QrContext)
+  // const { QrSpecs } = useContext(QrContext)
+  const handleChangeColor = (color) => {
+    handleChange({
+      target: {
+        name: 'fgColor',
+        value: color,
+      },
+    })
+  }
   return (
     <div>
       <h3>Colors</h3>
-      <Row>
-        <Col>
-          <ColorPicker
+      <div className="colorsSection">
+        <Button color="primary" onClick={() => handleChangeColor('#00234b')}>
+          Blue
+        </Button>
+        {/* <ColorPicker
             name="bgColor"
             label="Background Color"
             defaultValue={QrSpecs.bgColor}
             handleChange={handleChange}
-          />
-        </Col>
-        <Col>
-          <ColorPicker
+          /> */}
+        <Button color="secondary" onClick={() => handleChangeColor('#b4975a')}>
+          Gold
+        </Button>
+        {/* <ColorPicker
             name="fgColor"
             label="Dots Color"
             defaultValue={QrSpecs.fgColor}
             handleChange={handleChange}
-          />
-        </Col>
-      </Row>
-      <div style={{ padding: '15px' }}>
+          /> */}
+        {/* <div style={{ padding: '15px' }}>
         <h5>eyeColor</h5>
         <div
           style={{
@@ -99,6 +107,7 @@ export default function Colors({ handleChange }) {
             />
           </div>
         </div>
+      </div> */}
       </div>
     </div>
   )
