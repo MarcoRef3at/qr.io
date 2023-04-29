@@ -236,20 +236,19 @@ input[type='file'] {
   height: 7rem;
   border-radius: 0px;
 }
+.btn-group, .btn-group-vertical {
+  position: relative;
+  display: contents;
+  vertical-align: middle;
+}
 
 .addImageButton{
   width: 100%;
   height: 100%;
 }
 
-.logos{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 .my-2 .btn{
   width: 120px;
-  border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
