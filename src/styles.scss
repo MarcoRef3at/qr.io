@@ -1,11 +1,10 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
-@import '~bootstrap/scss/bootstrap.scss';
-
 $theme-colors: (
   'primary': #00234b,
   'secondary': #b4975a,
 );
 
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~bootstrap/scss/bootstrap.scss';
 main {
   height: 97vh;
   width: 99vw;
@@ -239,7 +238,8 @@ input[type='file'] {
   height: 7rem;
   border-radius: 0px;
 }
-.btn-group, .btn-group-vertical {
+.btn-group,
+.btn-group-vertical {
   position: relative;
   display: contents;
   vertical-align: middle;
@@ -250,40 +250,40 @@ input[type='file'] {
   height: 100%;
 }
 
-.my-2 .btn{
+.my-2 .btn {
   width: 120px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.downloadButton{
+.downloadButton {
   border: 1px solid #919499;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 12px 12px;
-    display: inline-block;
-    border-radius: 2px;
-    letter-spacing: 1px;
-    outline: 0;
-    position: relative;
-    -webkit-transition: all ease .5s;
-    -moz-transition: all ease .5s;
-    transition: all ease .5s;
-    padding-left: 22px;
-    padding-right: 22px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 12px;
+  display: inline-block;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  outline: 0;
+  position: relative;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  padding-left: 22px;
+  padding-right: 22px;
 }
-.downloadButton:hover{
+.downloadButton:hover {
   transform: translateY(-3px);
-  background-color:  map-get($theme-colors, 'primary');
+  background-color: map-get($theme-colors, 'primary');
 }
-.accordion-button:hover{
-background-color: #e7f1ff;
+.accordion-button:hover {
+  background-color: #e7f1ff;
 }
 .accordion {
-    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem #e7f1ff;
-    --bs-accordion-active-color: #000000;
-    --bs-accordion-active-bg: #e7f1ff;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem #e7f1ff;
+  --bs-accordion-active-color: #000000;
+  --bs-accordion-active-bg: #e7f1ff;
 }
 
 .colorsSection {
